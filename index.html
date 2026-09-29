@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diriya Business Advisory | On-site consulting for Sri Lankan business owners</title>
+<meta name="description" content="One-on-one financing and business consulting at your premises across Sri Lanka. Your first consultation is free. Pay what you feel is fair after that.">
+<meta property="og:title" content="Diriya Business Advisory">
+<meta property="og:description" content="We visit your business. First consultation free. Pay what you feel is fair after that.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><circle cx=%2232%22 cy=%2232%22 r=%2231%22 fill=%22%2314524A%22/><path d=%22M32 9l8 23H24z%22 fill=%22%23E3A812%22 transform=%22rotate(35 32 32)%22/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F8F7; --panel:#FFFFFF; --ink:#10302A; --muted:#55696A; --line:#D5E0DD;
+  --brand:#14524A; --brand-ink:#FFFFFF; --gold:#E3A812; --gold-ink:#2B2000;
+  --head:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0C1A18;--panel:#132725;--ink:#E8F1EF;--muted:#9DB3AF;--line:#25403C;--brand:#5FC2B0;--brand-ink:#06201B;}
+}
+:root[data-theme="dark"]{--bg:#0C1A18;--panel:#132725;--ink:#E8F1EF;--muted:#9DB3AF;--line:#25403C;--brand:#5FC2B0;--brand-ink:#06201B;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body)}
+h1,h2,h3{font-family:var(--head);line-height:1.12;margin:0 0 .5em;letter-spacing:-.01em}
+h1{font-size:clamp(2.3rem,6vw,4rem);font-weight:800}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0 0 1em;max-width:62ch}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.logo{font:800 1.25rem var(--head);color:var(--ink);text-decoration:none}
+.logo span{color:var(--muted);font-weight:500}
+nav a{color:var(--ink);text-decoration:none;margin-left:20px;font-weight:500;font-size:.95rem}
+nav a:hover{text-decoration:underline}
+.btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:14px 26px;border-radius:999px;font:600 1rem var(--body);text-decoration:none;border:0;cursor:pointer}
+.btn:hover{filter:brightness(1.1)}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--line)}
+.hero{padding:80px 0 64px}
+.hero .grid{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.lede{font-size:1.15rem;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.visit{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+.visit h3{margin-bottom:14px}
+.visit ol{list-style:none;margin:0;padding:0}
+.visit li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px dashed var(--line)}
+.visit li b{font-weight:600}.visit li span{color:var(--muted);text-align:right;font-size:.95rem}
+.visit .total{border-top:2px solid var(--ink);margin-top:6px;padding-top:14px;display:flex;justify-content:space-between;font:800 1.3rem var(--head)}
+.visit .total em{font-style:normal;background:var(--gold);color:var(--gold-ink);padding:0 10px;border-radius:6px}
+.alt-bg{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:0 48px;margin-top:28px}
+.services div{padding:20px 0;border-top:1px solid var(--line)}
+.services p{color:var(--muted);margin:0}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px;margin-top:28px;counter-reset:s}
+.steps div{counter-increment:s;border-left:4px solid var(--gold);padding-left:18px}
+.steps h3::before{content:counter(s) ". "}
+.steps p{color:var(--muted);margin:0}
+.pay{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.pay div{border:1px solid var(--line);border-radius:14px;padding:26px;background:var(--bg)}
+.pay .big{font:800 2.4rem var(--head);margin:0}
+.pay p{color:var(--muted)}
+form{display:grid;gap:14px;max-width:560px;margin-top:24px}
+label{font-weight:600;font-size:.95rem;display:grid;gap:6px}
+input,textarea,select{font:inherit;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+textarea{min-height:110px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.small{font-size:.88rem;color:var(--muted)}
+.links{display:flex;flex-wrap:wrap;gap:8px 22px;margin:18px 0 0;padding:0;list-style:none}
+footer{border-top:1px solid var(--line);padding:32px 0;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){
+  .hero .grid,.pay,.row{grid-template-columns:1fr}
+  nav a:not(.keep){display:none}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.a1{fill:var(--brand)}.a2{fill:var(--gold)}.a3{fill:var(--line)}.a4{fill:var(--bg)}.a5{fill:var(--panel);stroke:var(--line);stroke-width:2}.a6{fill:var(--ink)}
+.logo{display:flex;align-items:center;gap:10px}.logo svg{width:36px;height:36px;flex:none}.logo .t{color:var(--ink);font-weight:800}
+.side{display:grid;gap:20px}.art{width:100%;height:auto;display:block;border-radius:14px}
+.ic{width:32px;height:32px;stroke:var(--brand);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;display:block;margin-bottom:10px}
+.about{display:flex;gap:24px;align-items:flex-start}.avatar{width:96px;height:96px;flex:none}
+@media (max-width:760px){.about{flex-direction:column}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="mark" viewBox="0 0 64 64"><circle cx="32" cy="32" r="31" fill="#14524A"/><circle cx="32" cy="32" r="25" fill="none" stroke="#E3A812" stroke-width="1.6" opacity=".6"/><g transform="rotate(35 32 32)"><path d="M32 9l8 23H24z" fill="#E3A812"/><path d="M32 55l8-23H24z" fill="#F5F8F7"/></g><circle cx="32" cy="32" r="3" fill="#14524A" stroke="#F5F8F7" stroke-width="1.5"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.5c0-1 1-1.5 2.5-1.5s2.5.7 2.5 1.7-1 1.4-2.5 1.8-2.5.8-2.5 1.8 1 1.7 2.5 1.7 2.5-.5 2.5-1.5"/></symbol>
+<symbol id="i-flow" viewBox="0 0 24 24"><path d="M4 8h14l-3-3M20 16H6l3 3"/></symbol>
+<symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V4h8l10 10-8 8L3 12z"/><circle cx="7.5" cy="8.5" r="1.2"/></symbol>
+<symbol id="i-hour" viewBox="0 0 24 24"><path d="M6 3h12M6 21h12M7 3c0 5 5 6 5 9s-5 4-5 9M17 3c0 5-5 6-5 9s5 4 5 9"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></symbol>
+<symbol id="i-idea" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5z"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+<symbol id="i-ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l3 3 5-6"/></symbol>
+</svg>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Diriya Business Advisory, home"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#mark"/></svg><span class="t">Diriya <span>Business Advisory</span></span></a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#how">How it works</a>
+      <a href="#fees">Fees</a>
+      <a class="keep" href="#contact">Book free visit</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1>Straight advice on your money and your business, at your own premises.</h1>
+      <p class="lede">We visit your shop, factory, farm or office anywhere in Sri Lanka and sit down with you, one on one. The first consultation is free.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Book your free visit</a>
+        <a class="btn alt" href="#how">See how it works</a>
+      </div>
+    </div>
+    <div class="side">
+      <svg class="art" viewBox="0 0 400 230" role="img" aria-label="Illustration: an advisor and a shop owner meeting outside a small shop, with a growth chart beside it">
+        <rect width="400" height="230" rx="14" class="a4" style="fill:var(--panel);stroke:var(--line);stroke-width:2"/>
+        <circle cx="340" cy="40" r="20" class="a2" opacity=".85"/>
+        <path d="M2 200h396v26a12 12 0 0 1-12 4H14a12 12 0 0 1-12-4z" class="a3"/>
+        <rect x="50" y="92" width="210" height="108" class="a4"/>
+        <g class="a1"><rect x="50" y="70" width="42" height="30"/><rect x="134" y="70" width="42" height="30"/><rect x="218" y="70" width="42" height="30"/></g>
+        <g class="a2"><rect x="92" y="70" width="42" height="30"/><rect x="176" y="70" width="42" height="30"/></g>
+        <rect x="66" y="118" width="46" height="40" rx="3" class="a3"/><rect x="198" y="118" width="46" height="40" rx="3" class="a3"/>
+        <rect x="130" y="140" width="46" height="60" rx="3" class="a1" opacity=".85"/>
+        <rect x="285" y="88" width="98" height="96" rx="8" class="a4"/>
+        <rect x="298" y="148" width="16" height="24" class="a1"/><rect x="322" y="132" width="16" height="40" class="a1"/><rect x="346" y="108" width="16" height="64" class="a2"/>
+        <g stroke="var(--bg)" stroke-width="3">
+          <g transform="translate(112 0)"><circle cy="152" r="11" class="a6"/><path d="M-16 205v-27a16 16 0 0 1 32 0v27z" class="a2"/></g>
+          <g transform="translate(192 0)"><circle cy="152" r="11" class="a6"/><path d="M-16 205v-27a16 16 0 0 1 32 0v27z" class="a1"/><rect x="-26" y="176" width="16" height="21" rx="2" class="a5"/></g>
+        </g>
+      </svg>
+      <aside class="visit" aria-label="What a visit looks like">
+      <h3>A typical first visit</h3>
+      <ol>
+        <li><b>We come to you</b><span>Your premises, your schedule</span></li>
+        <li><b>You walk us through it</b><span>Numbers, problems, plans</span></li>
+        <li><b>You get next steps</b><span>Written and practical</span></li>
+      </ol>
+      <div class="total"><span>Cost of first visit</span><em>Rs. 0</em></div>
+    </aside>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt-bg">
+  <div class="wrap">
+    <h2>What we help with</h2>
+    <p>Built for owners of small and medium businesses who need a clear head beside them, not a lecture.</p>
+    <div class="services">
+      <div><h3>Financing and loans</h3><p>Choosing between bank loans, leasing, supplier credit and other sources, and preparing what lenders ask for.</p></div>
+      <div><h3>Cash flow</h3><p>Finding out why profit does not feel like cash, and building a simple plan for the weeks ahead.</p></div>
+      <div><h3>Costing and pricing</h3><p>Knowing what each product or service really costs you, so your prices protect your margin.</p></div>
+      <div><h3>Debt and repayment pressure</h3><p>Sorting out what you owe, to whom and in what order, and talking to creditors with a plan.</p></div>
+      <div><h3>Simple record keeping</h3><p>Setting up books and habits you can keep up with, so decisions rest on facts.</p></div>
+      <div><h3>Business problems in general</h3><p>Staff, stock, suppliers, growth, or a decision you are stuck on. Bring it and we will work through it.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div><h3>Contact us</h3><p>Send a message on WhatsApp or the form below. Tell us your business and what is worrying you.</p></div>
+      <div><h3>We visit you</h3><p>We agree a time and come to your business for your free first consultation.</p></div>
+      <div><h3>Get a plan</h3><p>You leave with clear next steps. If you want more help, we continue with follow-up sessions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fees" class="alt-bg">
+  <div class="wrap">
+    <h2>Fees: free first, then pay what is fair</h2>
+    <div class="pay">
+      <div><p class="big">Rs. 0</p><h3>First consultation</h3><p>No cost, no obligation. If it is not useful to you, you owe nothing.</p></div>
+      <div><p class="big">Your call</p><h3>Later sessions</h3><p>After each session, pay any amount you feel is reasonable for the value you received.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About us</h2>
+    <div class="about">
+    <svg class="avatar" viewBox="0 0 96 96" role="img" aria-label="Placeholder for your photo"><circle cx="48" cy="48" r="48" class="a3"/><circle cx="48" cy="38" r="16" class="a1"/><path d="M16 90a32 32 0 0 1 64 0z" class="a1"/></svg>
+    <div>
+    <!-- To use your own photo: delete the <svg class="avatar"> above and put <img class="avatar" src="photo.jpg" alt="Your name" style="border-radius:50%;object-fit:cover"> here, with photo.jpg beside index.html -->
+    <p>[Write 3 or 4 sentences here: your name, your background in finance or business, the sectors you know best, and why you started this. Owners hire people they trust, so be specific and honest.]</p>
+    <p class="small">Diriya is the Sinhala word for courage. Running a business in Sri Lanka takes plenty of it, and we want to help you spend less of it on worry.</p>
+    </div></div>
+  </div>
+</section>
+
+<section id="contact" class="alt-bg">
+  <div class="wrap">
+    <h2>Book your free visit</h2>
+    <p>Fill this in and it opens WhatsApp with your message ready to send. Prefer email? Use the button below the form.</p>
+    <form id="f">
+      <div class="row">
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Phone number<input name="phone" required inputmode="tel" autocomplete="tel"></label>
+      </div>
+      <div class="row">
+        <label>Business type<input name="biz" placeholder="e.g. grocery, garment, tea"></label>
+        <label>Town or district<input name="town" required></label>
+      </div>
+      <label>What would you like help with?<textarea name="msg" required></textarea></label>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+    </form>
+    <ul class="links">
+      <li><a id="mail" href="#">Send an email instead</a></li>
+      <li><a id="fb" href="#" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a id="ig" href="#" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; <span id="y"></span> Diriya Business Advisory, Sri Lanka. Our advice is general business guidance. It is not legal, tax or licensed investment advice, and we recommend you confirm those matters with a qualified professional.</p>
+  </div>
+</footer>
+
+<script>
+/* EDIT THESE FIVE LINES BEFORE YOU DEPLOY */
+var WHATSAPP = "94XXXXXXXXX";               // country code + number, no + or spaces
+var EMAIL    = "hello@yourdomain.lk";
+var FACEBOOK = "https://facebook.com/yourpage";
+var INSTAGRAM= "https://instagram.com/yourpage";
+var SITE     = "Diriya Business Advisory";
+
+function ic(q,a){document.querySelectorAll(q).forEach(function(el,i){el.insertAdjacentHTML("afterbegin",'<svg class="ic" aria-hidden="true"><use href="#i-'+a[i]+'"/></svg>')})}
+ic(".services > div",["coins","flow","tag","hour","book","idea"]);ic(".steps > div",["chat","pin","ok"]);
+document.getElementById("y").textContent = new Date().getFullYear();
+document.getElementById("fb").href = FACEBOOK;
+document.getElementById("ig").href = INSTAGRAM;
+document.getElementById("mail").href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent("Free consultation request");
+document.getElementById("f").addEventListener("submit", function(e){
+  e.preventDefault();
+  var d = new FormData(e.target);
+  var t = "Hello " + SITE + ", I would like to book my free consultation.\n" +
+    "Name: " + d.get("name") + "\nPhone: " + d.get("phone") + "\nBusiness: " + (d.get("biz")||"-") +
+    "\nLocation: " + d.get("town") + "\nHelp needed: " + d.get("msg");
+  window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t), "_blank", "noopener");
+});
+</script>
+</body>
+</html>
